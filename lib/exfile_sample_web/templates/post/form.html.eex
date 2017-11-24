@@ -1,0 +1,18 @@
+<%= form_for @changeset, @action, [multipart: true], fn f -> %>
+
+  <div class="form-group">
+    <%= label f, :title, class: "control-label" %>
+    <%= text_input f, :title, class: "form-control" %>
+    <%= error_tag f, :title %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :photo, class: "control-label" %>
+    <%= file_input f, :photo, class: "form-control" %>
+    <%= error_tag f, :photo %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
